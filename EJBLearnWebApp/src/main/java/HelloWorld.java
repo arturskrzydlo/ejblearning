@@ -5,7 +5,8 @@ public class HelloWorld{
 		
 		
 		System.out.println("Hello in the maven world : )");
-		// master change
+		
+		// artur change
 		// master change 2
 	}
 	
