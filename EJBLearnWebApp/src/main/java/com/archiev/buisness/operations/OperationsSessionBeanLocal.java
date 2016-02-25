@@ -1,9 +1,10 @@
-package operations;
+package com.archiev.buisness.operations;
 
-import javax.ejb.Remote;
+import javax.ejb.Local;
 
-@Remote
-public interface OperationsSessionBeanRemote {
+
+@Local 
+public interface OperationsSessionBeanLocal {
 
 	
 	public float add(float x, float y);

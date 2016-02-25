@@ -1,4 +1,3 @@
 HelloWorld.class
-operations\OperationsSessionBean.class
-operations\OperationsSessionBeanLocal.class
-operations\OperationsSessionBeanRemote.class
+com\archiev\buisness\operations\OperationsSessionBean.class
+com\archiev\buisness\operations\OperationsSessionBeanLocal.class

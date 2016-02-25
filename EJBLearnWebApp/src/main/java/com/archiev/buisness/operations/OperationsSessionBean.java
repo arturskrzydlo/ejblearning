@@ -1,4 +1,4 @@
-package operations;
+package com.archiev.buisness.operations;
 
 import javax.ejb.Stateless;
 
@@ -6,7 +6,7 @@ import javax.ejb.Stateless;
  * Session Bean implementation class OperationsSessionBean
  */
 @Stateless
-public class OperationsSessionBean implements OperationsSessionBeanRemote, OperationsSessionBeanLocal {
+public class OperationsSessionBean implements  OperationsSessionBeanLocal {
 
 	@Override
 	public float add(float x, float y) {
