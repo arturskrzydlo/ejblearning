@@ -9,27 +9,7 @@
     public void jspInit() {
         try {
 
-        final Hashtable jndiProperties = new Hashtable();
-            jndiProperties.put(Context.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
-            jndiProperties.put("jboss.naming.client.ejb.context", true);
-            InitialContext ic = new InitialContext(jndiProperties);
-            
-            final String appName = "";
-            // This is the module name of the deployed EJBs on the server. This is typically the jar name of the
-            // EJB deployment, without the .jar suffix, but can be overridden via the ejb-jar.xml
-            // In this example, we have deployed the EJBs in a jboss-as-ejb-remote-app.jar, so the module name is
-            // jboss-as-ejb-remote-app
-            final String moduleName = "EJBLearnWebApp";
-            // AS7 allows each deployment to have an (optional) distinct name. We haven't specified a distinct name for
-            // our EJB deployment, so this is an empty string
-            final String distinctName = "";
-            // The EJB name which by default is the simple class name of the bean implementation class
-            final String beanName = OperationsSessionBean.class.getSimpleName();
-            // the remote view fully qualified class name
-            final String viewClassName = OperationsSessionBeanLocal.class.getName();
-            // let's do the lookup (notice the ?stateful string as the last part of the jndi name for stateful bean lookup)
-            String lookupNameFromExample = new String("/" + moduleName + "/" + distinctName + "/" + beanName + "!" + viewClassName);
-            
+            InitialContext ic = new InitialContext();
             ops = (OperationsSessionBeanLocal)ic.lookup("java:global/EJBLearnWebApp/OperationsSessionBean"); 
             
             System.out.println("Loaded Calculator Bean");
